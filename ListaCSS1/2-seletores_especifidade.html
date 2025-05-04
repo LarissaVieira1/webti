@@ -22,7 +22,7 @@
 </head>
 <body>   
    <ol>
-      <li class="churras"> farofa </li>
+      
    <!--item 1--> <li id="lip0">Abacaxi</li>
    <!--item 2--> <li           class="fruta">Melão</li>
    <!--item 3--> <li id="lip2" class="fruta">Pera</li>
@@ -32,6 +32,17 @@
    <!--item 7--> <li           class="churras">Linguiça</li>
    <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
    </ol>   
+   <p>
+     <b>Itens</b> 
+   </p>
+   <p>Item 1: Fica vermelho, por ser afetado pelo seletor da regra 1 sendo um item da lista </p>
+   <p>Item 2: Fica cinza, mesmo sendo afetado pela primerira regra por ele ser afetado pela regra 3 fica cinza</p>
+   <p>Item 3: Fica azul, por causa do id dele que esta sendo usado na regra 6</p>
+   <p>Item 4: Fica laranja, por causa da regra 7 que usa o id e a classe junto para chamar esse item</p>
+   <p>Item 5: Fica cinza por ser da classe fruta assim como o item 2</p>
+   <p>Item 6: Fica roxo por causa da regra 8, que busca a li da classe churras e id lip5</p>
+   <p>Item 7: Fica preto por causa da regra 4, que busca uma li da classe churras que vem depois de uma li qualquer</p>
+   <p>Item 8: Fica da cor magenta por cause da regra 5, que aplica a cor magenta no item com classe churras que o draggable="true"</p>
 </body>
 </html>
 
