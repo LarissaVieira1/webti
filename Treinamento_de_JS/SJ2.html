@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let n = Number(prompt("Diogite um número:"));
+        
+        let i=0;
+        for(i=0;i<=n; i++){
+            console.log("i="+i)
+        }
+        let list = document.createElement("ul")
+        document.body.appendChild(list)
+        for(i=0;i<=n; i++){
+            item=document.createElement("li")
+            item.innerHTML=i
+            item.id="n"+i
+            list.appendChild(item);
+
+            if(i%2==0){
+                item.style.backgroundColor="#FF000"
+            }
+        }
+
+    </script>
+</body>
+</html>
