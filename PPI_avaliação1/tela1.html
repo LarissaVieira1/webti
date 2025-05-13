@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizualizar Lotes </title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif; /* Colocar um tamnho de fonte*/
+        } 
+
+        .areaMenu{
+            background-color:  #5496c5;
+            padding: 15px 20px; /* Espaço interno no em cima e do lado no menu*/
+            display: flex;
+            gap: 20px;
+        }
+
+        .areaMenu a{
+            color: black;
+            text-decoration: none; /* Tira o sublinahdo dos links*/
+            font-weight: bold;
+            transition: color 0.3s 
+        }
+
+        .areaMenu a:hover{  /* quando passar o mouse ficar de outra cor os "as"*/
+            color: white; 
+        }
+
+        .main{
+            display: flex;
+            height: calc(100vh - 60px); /* Usa a tela toda, menos 60 px do menu */
+        }
+
+        .tabela-lateral
+{
+            width: 30%;
+            min-width: 200px;
+            max-width: 600px;
+            resize: horizontal;
+            overflow: auto;
+            background-color:white;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+            overflow-y: auto; /* ativa rolagem vertical se necessario, entender melhor isso!*/
+        }
+
+        table, th, td{
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background-color: white;
+
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th{
+           background-color: #ddd;
+           padding: 10px;
+           text-align: left;
+        }
+
+        td{
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .detalhesLote{
+            flex: 1;
+            background-color: #16599b;
+            color: white;
+            padding: 30px;
+        }
+
+        h2{
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .form-grid{   /* colunas lado a lado e espacamento entre elas*/
+            display: flex;
+            gap: 50px;
+        }
+
+        .coluna{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        label{   /* Não sei se vou mnater pq nao tem nada nos meus text*/
+            font-weight: bold;
+        }
+
+        input[type="text"]{
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+        }
+
+        .botoes{
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        
+        }
+
+        button{
+            padding: 10px 25px;
+            background-color: white;
+            color: #003366;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer; /* cursor de mao ao passar por cima ?*/
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="areaMenu"> 
+    <a href="#">Home</a>  <!--Isso tá certo como link de navegação ?-->
+    <a href="#">Vizualizar</a>
+    <a href="#">Cadastrar</a>
+    </div>
+
+    <div class="main">  <!--Engloba a tabela e os detalhes do lote-->
+     <div class="tabela">
+        <table>
+            <thead> <!--Linha de titulo -->
+                <tr>
+                    <th>REFERÊNCIA</th>
+                    <th>QUANTIDADE</th>
+                    <th>DATA</th>
+                </tr>
+            </thead>
+            <tbody> <!--Linha de dados-->
+                <tr>
+                    <td>129381</td>
+                    <td>1121</td>
+                    <td>2006-04-22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+    
+    <div class="detalhesLote">
+        <h2>DETALHES</h2>
+    <div class="form-grid">
+        <div class="coluna">
+            <div class="linha"> <!--Divisão em divs para ficarem na mesma linha-->
+                <label>ENTRADA</label>
+                <input type="text"  id="entrada" name="entrada" required minlength="5" maxlength="10" size="30">
+            </div>
+           
+            <label>PREÇO</label>
+            <input type="text" value=""> 
+            <label>TECIDO</label>
+            <input type="text" value="">
+            <label>MARCA</label>
+            <input type="text" value="">
+            <label>REFERÊNCIA</label>
+            <input type="text" value="">
+            <label>QUANTIDADE</label>
+            <input type="text" value="">
+        </div>
+        <div class="coluna">
+            <label>COLEÇÃO</label>
+            <input type="text" value="">
+            <label>MODELO</label>
+            <input type="text" value="">
+            <label>TAMANHO</label>
+            <input type="text" value="">
+            <label>LINHA</label>
+            <input type="text" value="">
+            <label>PRAZO</label>
+            <input type="text" value="">
+        </div>
+    </div>
+
+    <div class="botoes">
+        <button>EDITAR</button>
+        <button>SALVAR</button>
+        <button>VOLTAR</button>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>
