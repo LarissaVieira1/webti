@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número aleatório</title>
+</head>
+<body>
+    <h1>Número aleatório</h1>
+    <label for="valormin">Valor Mínimo</label>
+    <input id="valormin" type="number">
+
+    <label for="valormax">Valor Máximo</label>
+    <input id="valormax" type="number">
+
+    <button id="botao">Clica em mim!</button>
+    <p id="nrand"> </p>
+
+    <script>
+        /*Deixar o osuário informar o intervalo por meio de dois campos inputs*/
+        let min = document.querySelector("#valormin")
+        let max = document.querySelector("#valormax")
+
+        let meuBotao = document.querySelector("#botao")
+        meuBotao.addEventListener("click", ()=>{
+        let minimo = Number(min.value);
+        let delta = Number(max.value)- Number(min.value) 
+
+            let i = Math.trunc(Math.random()*(delta) + minimo)
+            let p = document.createElement("p")
+            p.innerHTML = "Número aleatorio: " + i
+            document.body.appendChild(p)
+        })
+    </script>
+</body>
+</html>

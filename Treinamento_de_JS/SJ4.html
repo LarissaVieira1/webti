@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de clicks</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-        }
-    </style>
+    <title>Número aleatório</title>
 </head>
 <body>
+    <h1>Número aleatório</h1>
     <button id="botao">Clica em mim!</button>
+    <p id="nrand"> </p>
+
     <script>
         let meuBotao = document.querySelector("#botao")
-        let i = 0;
         meuBotao.addEventListener("click", ()=>{
-            meuBotao.innerHTML = i;
-            i++
+            let i = Math.trunc(Math.random()*100)
+            let p = document.createElement("p")
+
+            p.innerHTML = "Número aleatorio: " + i
+            document.body.appendChild(p)
         })
     </script>
 </body>
