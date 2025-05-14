@@ -1,197 +1,259 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizualizar Lotes </title>
-    <style>
-        body{
-            margin: 0;
-            font-family: Arial, sans-serif; /* Colocar um tamnho de fonte*/
-        } 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualizar Lotes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        .areaMenu{
-            background-color:  #5496c5;
-            padding: 15px 20px; /* Espaço interno no em cima e do lado no menu*/
-            display: flex;
-            gap: 20px;
-        }
+    .areaMenu {
+      background-color: #5496c5;
+      padding: 15px 20px;
+      display: flex;
+      gap: 20px;
+    }
 
-        .areaMenu a{
-            color: black;
-            text-decoration: none; /* Tira o sublinahdo dos links*/
-            font-weight: bold;
-            transition: color 0.3s 
-        }
+    .areaMenu a {
+      color: black;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-        .areaMenu a:hover{  /* quando passar o mouse ficar de outra cor os "as"*/
-            color: white; 
-        }
+    .areaMenu a:hover {
+      color: white;
+    }
 
-        .main{
-            display: flex;
-            height: calc(100vh - 60px); /* Usa a tela toda, menos 60 px do menu */
-        }
+    .main {
+      display: flex;
+      height: calc(100vh - 60px);
+      padding: 0;
+      margin: 0;
+    }
 
-        .tabela-lateral
-{
-            width: 30%;
-            min-width: 200px;
-            max-width: 600px;
-            resize: horizontal;
-            overflow: auto;
-            background-color:white;
-            padding: 20px;
-            border-right: 2px solid #ccc;
-            overflow-y: auto; /* ativa rolagem vertical se necessario, entender melhor isso!*/
-        }
+    .tabela {
+      width: 30%;
+      min-width: 200px;
+      max-width: 500px;
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      border-right: 2px solid #ccc;
+      display: flex;
+      align-items: flex-start;
+      overflow-x: auto;
+    }
 
-        table, th, td{
-            border: 1px solid #ccc;
-            border-collapse: collapse;
-            background-color: white;
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      background-color: white;
+    }
 
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
 
-        table{
-            width: 100%;
-            border-collapse: collapse;
-        }
+    }
 
-        th{
-           background-color: #ddd;
-           padding: 10px;
-           text-align: left;
-        }
+    th {
+      background-color: #ddd;
+      padding: 10px;
+      text-align: left;
+    }
 
-        td{
-            padding: 8px;
-            border-bottom: 1px solid #ccc;
-        }
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
 
-        .detalhesLote{
-            flex: 1;
-            background-color: #16599b;
-            color: white;
-            padding: 30px;
-        }
+    .detalhesLote {
+      flex: 1;
+      background-color: #386b8f;
+      color: white;
+      padding: 30px;
+    }
 
-        h2{
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
 
-        .form-grid{   /* colunas lado a lado e espacamento entre elas*/
-            display: flex;
-            gap: 50px;
-        }
+    .form-grid {
+      display: flex;
+      gap: 100px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
 
-        .coluna{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-        }
+    .coluna {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
 
-        label{   /* Não sei se vou mnater pq nao tem nada nos meus text*/
-            font-weight: bold;
-        }
+    .linha {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-        input[type="text"]{
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            width: 80%;
-        }
+    label {
+      width: 100px;
+      font-weight: bold;
+      text-align: right;
+    }
 
-        .botoes{
-            margin-top: 30px;
-            display: flex;
-            gap: 20px;
-        
-        }
+    input[type="text"], select {
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 220px;
+    }
 
-        button{
-            padding: 10px 25px;
-            background-color: white;
-            color: #003366;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer; /* cursor de mao ao passar por cima ?*/
-        }
-        
+    .botoes {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      padding: 40px 10px;
+    }
 
-    </style>
+    button {
+       padding: 10px 25px;
+       background-color: white;
+       color: black;
+       border: none;
+       border-radius: 5px;
+       font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #5496c5;
+      color: white;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="areaMenu"> 
-    <a href="#">Home</a>  <!--Isso tá certo como link de navegação ?-->
-    <a href="#">Vizualizar</a>
+
+  <div class="areaMenu">
+    <a href="#">Home</a>
+    <a href="#">Visualizar</a>
     <a href="#">Cadastrar</a>
+  </div>
+
+  <div class="main">
+    <div class="tabela">
+      <table>
+        <thead>
+          <tr>
+            <th>REFERÊNCIA</th>
+            <th>QUANTIDADE</th>
+            <th>DATA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>129381</td>
+            <td>1121</td>
+            <td>04-05-2025</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="main">  <!--Engloba a tabela e os detalhes do lote-->
-     <div class="tabela">
-        <table>
-            <thead> <!--Linha de titulo -->
-                <tr>
-                    <th>REFERÊNCIA</th>
-                    <th>QUANTIDADE</th>
-                    <th>DATA</th>
-                </tr>
-            </thead>
-            <tbody> <!--Linha de dados-->
-                <tr>
-                    <td>129381</td>
-                    <td>1121</td>
-                    <td>2006-04-22</td>
-                </tr>
-            </tbody>
-        </table>
-    </div> 
-    
     <div class="detalhesLote">
-        <h2>DETALHES</h2>
-    <div class="form-grid">
+      <h2>DETALHES</h2>
+      <div class="form-grid">
         <div class="coluna">
-            <div class="linha"> <!--Divisão em divs para ficarem na mesma linha-->
-                <label>ENTRADA</label>
-                <input type="text"  id="entrada" name="entrada" required minlength="5" maxlength="10" size="30">
-            </div>
-           
+          <div class="linha">
+            <label>ENTRADA</label>
+            <input type="text" />
+          </div>
+          <div class="linha">
             <label>PREÇO</label>
-            <input type="text" value=""> 
+            <input type="text" />
+          </div>
+          <div class="linha">
             <label>TECIDO</label>
-            <input type="text" value="">
+            <input type="text" />
+          </div>
+          <div class="linha">
             <label>MARCA</label>
-            <input type="text" value="">
+            <input type="text" />
+          </div>
+          <div class="linha">
             <label>REFERÊNCIA</label>
-            <input type="text" value="">
+            <input type="text" />
+          </div>
+          <div class="linha">
             <label>QUANTIDADE</label>
-            <input type="text" value="">
+            <input type="text" />
+          </div>
         </div>
-        <div class="coluna">
-            <label>COLEÇÃO</label>
-            <input type="text" value="">
-            <label>MODELO</label>
-            <input type="text" value="">
-            <label>TAMANHO</label>
-            <input type="text" value="">
-            <label>LINHA</label>
-            <input type="text" value="">
-            <label>PRAZO</label>
-            <input type="text" value="">
-        </div>
-    </div>
 
-    <div class="botoes">
+        <div class="coluna">
+          <div class="linha">
+            <label>COLEÇÃO</label>
+            <select>
+              <option value=""></option> // Selecionar
+              <option>Verão</option>
+              <option>Inverno</option>
+              <option>Outono</option>
+              <option>Primavera</option>
+            </select>
+          </div>
+          <div class="linha">
+            <label>MODELO</label>
+            <select>
+              <option value=""></option>
+              <option>Camiseta</option>
+              <option>Calça</option>
+              <option>Shorts</option>
+            </select>
+          </div>
+          <div class="linha">
+            <label>TAMANHO</label>
+            <select>
+              <option value=""></option>
+              <option>P</option>
+              <option>M</option>
+              <option>G</option>
+              <option>GG</option>
+            </select>
+          </div>
+          <div class="linha">
+            <label>LINHA</label>
+            <select>
+              <option value=""></option>
+              <option>Preto</option>
+              <option>Branca</option>
+              <option>Azul</option>
+            </select>
+          </div>
+          <div class="linha">
+            <label>PRAZO</label>
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+
+      <div class="botoes">
         <button>EDITAR</button>
         <button>SALVAR</button>
         <button>VOLTAR</button>
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
 
 </body>
 </html>
