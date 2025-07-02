@@ -25,6 +25,7 @@ switch ($rota){
          require "home.php";
         break;
     
+    
     default:
         echo "Rota desconhecida";
     }

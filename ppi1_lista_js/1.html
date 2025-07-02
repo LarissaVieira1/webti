@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>O que é Java Script?</title>
+</head>
+<body>
+    <h1 id="Titulo">O que é Java Script?</h1>
+    <h2 id="PA">Qual é a motivação para a criação do JavaScript?</h2>
+    <p id="RA"><br></p>
+    <h2 id="PB">A diferença entre execução no navegador e no servidor.</h2>
+    <p id="RB"><br></p>
+    <h2 id="PC">O conceito de sandbox no navegador.</h2>
+    <p id="RC"><br></p>
+    <h2 id="PD">Objetos globais como document, console e alert.</h2>
+    <p id="RD"></p>
+
+    <h1 id="tituloHora">Hora atual!</h1>
+    <p id="h"></p>
+    
+    <script>
+        console.log("Informática 6");
+        alert("Aperte okay se quiser saber algumas informações legais!");
+        let hora = new Date();
+        let horaAtual = hora.toLocaleTimeString();
+        document.getElementById("h").innerHTML= horaAtual;
+    </script>
+    
+</body>
+</html>

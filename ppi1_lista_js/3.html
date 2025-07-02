@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cálculo de IMC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    fieldset {
+      background-color: #f0f0f0;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    img {
+      width: 150px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calculadora de IMC</h1>
+
+  <fieldset>
+    Nome: <input type="text" id="nome"><br><br>
+    Peso (kg): <input type="number" id="peso" step="0.1"><br><br>
+    Altura (m): <input type="number" id="altura" step="0.01"><br><br>
+    <button onclick="calcularIMC()">Calcular</button>
+  </fieldset>
+
+  <h3>Resultado:</h3>
+  <p id="resultadoIMC"></p>
+  <p id="classificacao"></p>
+  <img id="imgPerfil" src="" alt="Imagem do perfil de saúde">
+
+  <script>
+    function calcularIMC() {
+      const nome = document.getElementById("nome").value.trim();
+      const peso = parseFloat(document.getElementById("peso").value);
+      const altura = parseFloat(document.getElementById("altura").value);
+      const resultadoIMC = document.getElementById("resultadoIMC");
+      const classificacao = document.getElementById("classificacao");
+      const img = document.getElementById("imgPerfil");
+
+     
+      if (!nome || isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        alert("Preencha corretamente todos os campos!");
+        return;
+      }
+
+     
+      const imc = peso / (altura * altura);
+      const imcFormatado = imc.toFixed(2);
+      resultadoIMC.innerText = `${nome}, seu IMC é ${imcFormatado}`;
+
+      let faixa = "";
+
+      
+      if (imc < 18.5) {
+        faixa = "Abaixo do peso";
+      } else if (imc < 24.9) {
+        faixa = "Peso normal";
+      } else if (imc < 29.9) {
+        faixa = "Sobrepeso";
+      } else if (imc < 34.9) {
+        faixa = "Obesidade grau 1";
+      } else if (imc < 39.9) {
+        faixa = "Obesidade grau 2";
+      } else {
+        faixa = "Obesidade grau 3 (mórbida)";
+      }
+
+      classificacao.innerText = `Classificação: ${faixa}`;
+
+      
+      const faixaIMC = Math.floor(imc);
+      switch (true) {
+        case (faixaIMC < 18):
+          img.src = "Imagem/magro.png";
+          break;
+        case (faixaIMC < 25):
+          img.src = "Imagem/normal.png";
+          break;
+        case (faixaIMC < 30):
+          img.src = "Imagem/sobrepeso.png";
+          break;
+        case (faixaIMC < 35):
+          img.src = "Imagem/obesidade1.png";
+          break;
+        case (faixaIMC < 40):
+          img.src = "Imagem/obesidade2.png";
+          break;
+        default:
+          img.src = "Imagem/obesidade3.png";
+          break;
+      }
+    }
+  </script>
+
+</body>
+</html>

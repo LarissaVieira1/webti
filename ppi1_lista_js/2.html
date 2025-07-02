@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Variáveis e Operadores</title>
+</head>
+<body>
+    <button id="btn">Verificar Variáveis</button>
+
+    <p id="typeTXT"></p>
+    <p id="typeNUMBR"></p>
+    <p id="typeBOOL"></p>
+    <p id="typeINDEF"></p>
+    <p id="typeNULL"></p>
+    <p id="typeOBJ"></p>
+    <p id="typeARRAY"></p>
+
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+    
+            let txt = "oii";
+            let numbr = 5;
+            let bool = true;
+            let indef = undefined;
+            let nulo = null;
+            let obj = { nome: "João" };
+            let array = [1, 2, 3];
+
+            document.getElementById("typeTXT").innerText = `txt (valor: "${txt}") é do tipo: ${typeof txt}`;
+            document.getElementById("typeNUMBR").innerText = `numbr (valor: ${numbr}) é do tipo: ${typeof numbr}`;
+            document.getElementById("typeBOOL").innerText = `bool (valor: ${bool}) é do tipo: ${typeof bool}`;
+            document.getElementById("typeINDEF").innerText = `indef (valor: ${indef}) é do tipo: ${typeof indef}`;
+            document.getElementById("typeNULL").innerText = `nulo (valor: ${nulo}) é do tipo: ${typeof nulo} (mas deveria ser null, é uma curiosidade do JavaScript!)`;
+            document.getElementById("typeOBJ").innerText = `obj (valor: ${JSON.stringify(obj)}) é do tipo: ${typeof obj}`;
+            document.getElementById("typeARRAY").innerText = `array (valor: [${array}]) é do tipo: ${Array.isArray(array) ? "array (object internamente)" : typeof array}`;
+
+            let result1 = txt + numbr;
+            let result2 = bool * numbr;
+            let result3 = txt * bool;
+            let result4 = numbr + null;
+
+            console.log("txt + numbr:", result1);       
+            console.log("bool * numbr:", result2);      
+            console.log("txt * bool:", result3);         
+            console.log("numbr + null:", result4);       
+
+            document.getElementById("result1").innerText = `"oii" + 5 = "${result1}" → O número foi convertido em string.`;
+            document.getElementById("result2").innerText = `true * 5 = ${result2} → true é convertido para 1.`;
+            document.getElementById("result3").innerText = `"oii" * true = ${result3} → Não faz sentido multiplicar string por booleano, então dá NaN.`;
+            document.getElementById("result4").innerText = `5 + null = ${result4} → null vira 0 na soma com número.`;
+        });
+    </script>
+</body>
+</html>
