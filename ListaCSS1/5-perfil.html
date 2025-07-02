@@ -1,48 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .divPessoal{
-            background-color: gray;
-            position: absolute;
-            min-height:max-content;
-            max-width: 250px;
-        }
-        .imgPerfil{
-            height: 100px;
-            width: 100px; 
-        }
-        .divSobre{
-            position: absolute;
-            left: 300px;
+  <meta charset="UTF-8">
+  <title>Perfil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
 
-    </style>
+    .container {
+      display: flex;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 20px;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      border-bottom: 1px solid gray;
+      width: 100%;
+      text-align: left;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .content {
+      padding: 30px;
+      width: 70%;
+    }
+
+    .content h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 20px 0 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .no-experience {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <div class="divPessoal">
-        <p><img src="/ListaCSS1/LariFoto.jpeg" alt="" class="imgPerfil"></p>
-        <h1><P></P>Pessoal</h1>
-        <p><b>Nome:</b></p>
-        <p>Larissa Vieira</p>
-        <p><b>Endereço:</b></p>
-        <p>Rua Port. Nº 93</p>
-        <p><b>Numero de telefone:</b></p>
-        <p>(47) 997457116</p>
-        <p><b>Email:</b></p>
-        <p>larissa.vsl@aluno.ifsc.edu.br</p>
+  <div class="container">
+    <div class="sidebar">
+      <img src="Foto.jpeg" alt="Larissa">
+      <h3>Pessoal</h3>
+      <p><strong>Nome</strong><br>Larissa Vieira</p>
+      <p><strong>Endereço</strong><br>Rua Portugal, 93<br>89116759 Gaspar</p>
+      <p><strong>Número de telefone</strong><br>(47) 99745-7116</p>
+      <p><strong>Email</strong><br>Larissa.vsl@aluno.ifsc.edu.br</p>
     </div>
-    <div class="divSobre">
-        <p><b>Larissa Vieira</b></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptates, repellat temporibus magnam illum ipsam iusto omnis dolorum ratione, blanditiis assumenda ipsum id similique! Voluptatibus saepe ad tempora ut tempore?</p>
-        <p><b>Experiencias Proficionais</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique itaque expedita earum rem nisi fugiat ipsam. Incidunt eum tenetur ad ex. Id nisi sit ex explicabo at laboriosam consequuntur quo!</p>
-   
-   
+
+    <div class="content">
+      <h1>Larissa Vieira</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores quod tenetur aliquam alias illum eos quo cupiditate eum, ipsam ducimus, quae voluptate ratione? Itaque, ullam vel quidem rem nesciunt iste.</p>
+
+      <div class="section-title">Experiência profissional</div>
+      <p class="no-experience">Não possui experiências profissionais.</p>
     </div>
+  </div>
 </body>
 </html>
