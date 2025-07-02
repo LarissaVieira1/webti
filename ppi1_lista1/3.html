@@ -1,27 +1,41 @@
-<html>
- <heAD>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estados do Brasil</title>
     <style>
-        table,caption,th,td{
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    img{
-        width: 150px;
-    }
+        table, caption, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+        }
     </style>
+</head>
+<body>
 
-     </heAD>
-     <body>
-        <title>Estados do Brasil</title>
-        <table>
+    <h1>Estados do Brasil</h1>
+
+    <table>
+        <thead>
             <tr>
-             <th>Estado</th>
-             <th>População</th>
-             <th>Capital</th>
-             <th>Região</th>
-             <th>Bandeira</th>
-
-             <tr>
+                <th>Estado</th>
+                <th>População</th>
+                <th>Capital</th>
+                <th>Região</th>
+                <th>Bandeira</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td><a href="https://pt.wikipedia.org/wiki/Acre" target="_blank">Acre</a></td>
                 <td>880.631</td>
                 <td>Rio Branco</td>
@@ -249,7 +263,9 @@
                 <td><img src="Imagens/Bandeira_do_Tocantins.svg.png" alt=""> </td>
 
             </tr> 
-        </table>
-    </body>
-    
+                 
+        </tbody>
+    </table>
+
+</body>
 </html>
