@@ -1,7 +1,7 @@
 <?php
-include_once __DIR__. './../modelo/Conexao.php';
-include_once __DIR__. './../modelo/Usuario.php';
-include_once __DIR__. './../modelo/UsuarioDAO.php';
+include_once __DIR__. './../Modelo/Conexao.php';
+include_once __DIR__. './../Modelo/Usuario.php';
+include_once __DIR__. './../Modelo/UsuarioDAO.php';
 
 $daoUsuario=new UsuarioDAO();
 $daoUsuario->insere(new Usuario("João","joao@gmail.com","joao"));
