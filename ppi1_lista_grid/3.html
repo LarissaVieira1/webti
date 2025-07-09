@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Atividade 4</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    b {
+      font-size: larger;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "left banner right"
+        "left main right"
+        "left low right"
+        "footer footer footer";
+      grid-template-columns: 150px 1fr 150px; 
+      grid-template-rows: auto auto 1fr auto auto;
+      gap: 5px;
+      height: 100vh; 
+      padding: 5px;
+    }
+
+    header {
+      grid-area: header;
+      background: rgb(255, 166, 0); 
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .banner {
+      grid-area: banner;
+      background: red;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .left {
+      grid-area: left;
+      background: rgb(0, 255, 0); 
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .right {
+      grid-area: right;
+      background: rgb(255, 231, 93); 
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    main {
+      grid-area: main;
+      background: rgb(0, 111, 221); 
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      min-height: 200px; 
+    }
+
+    .low {
+      grid-area: low;
+      background: rgb(188, 255, 168); 
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      grid-area: footer;
+      background: rgb(154, 240, 255); 
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "banner"
+          "left"
+          "main"
+          "right"
+          "low"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      main {
+        min-height: 150px; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header><b>Header</b></header>
+    <div class="banner"><b>Banner</b></div>
+    <aside class="left"><b>Left Aside</b></aside>
+    <main><b>Main Content</b></main>
+    <aside class="right"><b>Right Aside</b></aside>
+    <div class="low"><b>Low Content</b></div>
+    <footer><b>Footer</b></footer>
+  </div>
+</body>
+</html>
