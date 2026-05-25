@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- configurar o seu documento HTML-->
+    <title>HTML</title>
+    <style>
+        table,td,th{
+            border-collapse: collapse;
+            border:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">Título em HTML de nível 1</h1>
+    <h2>Título em HTML de nível 2</h2>
+    <h3>Título em HTML de nível 3</h3>
+    <h4>Título em HTML de nível 4</h4>
+    <h5>Título em HTML de nível 5</h5>
+    <h6>Título em HTML de nível 6</h6>
+    <p>Isto é um paragrafo em HTML</p>
+    <span>Isto é um span</span>
+    <span>Isto é um span</span>
+    <h1>Display dos elementos HTML</h1>
+    <p>Os elementos html possuem um exibição ou <i>display</i> <em>inline</em> ou <em>block</em></p>
+    <p>block - é uma exibição que incia na margem esquerda até a direita, em que podemos determinar altura e largua do
+        elemento. Por <sup>3</sup><sub>3</sub>padrão, no <mark>HTML</mark>, elementos com exibição <del>block</del> não dividem espaço na horizontal com outros
+        elementos</p>
+    <p>inline - é uma exibição que permite que o elemento seja apresentado dentro de uma linha com outros elementos como
+        um elemento textual. WC3 <sup>1</sup> <span>ola</span> </p>
+        <p>O html possui tag para quebrar<br> um linha </p>
+
+    <img src="./imagem.jpg" alt="pinguim">
+<hr>
+    <ul draggable="true">
+        <li>item da lista 1</li>
+        <li>item da lista 2</li>
+        <li>item da lista 3</li>
+        <li>item da lista 4</li>
+    </ul>
+
+    <ol type="I" start="5">
+        <li>item lista 1</li>
+        <li>item lista 2</li>
+        <li>item lista 3</li>
+        <li>item lista 4</li>
+    </ol>
+<hr>
+    <table>
+        <thead>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">A</td>
+                <td colspan="2">B</td>
+               
+            </tr>
+            <tr>
+                
+                <td>B</td>
+                <td>C</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+        </tfoot>
+    </table>
+<hr>
+    <h1>Como criar links no HTML </h1>
+
+    <p>A tag <em>A</em> no HTML é utilizada para vincular documentos</p>
+    <a href="https://google.com" target="_blank">link do google</a>
+    <div>
+        <p>falando sobre <a href="#h1">h1</a></p>
+
+    </div>
+    <form action="https://google.com/search" method="POST">
+
+        <input type="input"  placeholder="Entre com termo de pesquisa" name="q">
+        <textarea name="" id=""></textarea>
+        <input type="submit" value="Pesquisar">
+    </form>
+<hr>
+
+    1-<a src="https://www.w3.org/TR/2012/WD-html-markup-20121025/elements.html"> HTML reference</a>
+    <canvas id="canvas" height="1920px" width="1080px" style="border: 1px solid black;"></canvas>
+
+    <script>
+        //código java script
+        let ctx= canvas.getContext("2d")
+        ctx.moveTo(0,0)
+        ctx.lineTo(1080,1920)
+        ctx.stroke()
+        var desenhando=false;
+        canvas.addEventListener("mousedown",(eventoMouse)=>{
+            ctx.moveTo(eventoMouse.offsetX,eventoMouse.offsetY)
+            desenhando=true;
+        });
+        canvas.addEventListener("mouseup",()=>{
+            desenhando=false;
+        });
+        canvas.addEventListener("mousemove",(eventoMouse)=>{
+            if(desenhando){
+                ctx.lineTo(eventoMouse.offsetX,eventoMouse.offsetY)
+                ctx.stroke()
+                }
+        }
+        );
+
+
+    </script>
+</body>
+
+</html>
