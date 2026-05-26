@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "aula2.css">
+    <title>CSS</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        h1{color:white ;}
+        html{border: 1px solid red; }
+        body{
+            border: 1px solid rgb(255, 47, 151);
+            height: 100vh;
+            background-image: url("carro.png");
+            background-size: contain;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(230, 73, 138);">CSS</h1>
+    <p>O CSS é uma linguagem de estilização e definição de comportamento sobre o HTML!</p>
+    <p>Pode ser incoporado em 3 locais diferentes.</p>
+
+    <dl>
+    <dt>CSS externo:</dt>
+    <dd>CSS externo é definido utilizando a tag link no ínicio do documento HTML na seção de HEAD.</dt>
+        <code>
+            &lt link rel = "stylesheet" href = "style.css" &gt
+        </code>
+    </dd>
+
+    <dt>CSS incoporado a tag style:</dt>
+    <dd>O CSS incoporado é difinido comumente na seção HEAD,podendo ser definido também em outros locais</dd>
+
+    <dt>CSS inline:</dt>
+    <dd>É definido por meio da propriedade style no próprio elemento HTML, no qual ele será utiliazdo</dd>
+    </dl>
+    <hr>
+    <h1>Model Box (Modelo em Caixa)</h1>
+    <p>O HTML e CSS possuem um conceito central que é o modelo em caixa, um elemento é definido dentro do outro tendo uma estrutura comum a todos elementos HTML </p>
+    <img src="modelbox.jpg" alt="" style="width: 500px;">
+
+    <span style="display: block;
+     border: 1px solid black ; 
+     padding: 20px 15px 10px 50 px;
+    ">TEXTO EXEMPLO DE PADDING</span>
+    <hr>
+    <hr>
+    <span style="
+    display: block;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(231, 168, 74);
+    border: 10px solid rgb(138, 40, 40);
+    background-image: url('carro.png');
+    background-position: 0px 0px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    outline: 5px solid rgb(67, 49, 67);
+    "
+        
+    >TEXTO EXEMPLO CAMADAS CONTENT</span>
+
+</body>
+</html>
