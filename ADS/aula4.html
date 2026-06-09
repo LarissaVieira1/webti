@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --tamanhobox:100px;
+        --meiobox:calc(var(--tamanhobox)/2);
+    }
+    .box{width: var(--tamanhobox);height: var(--tamanhobox);
+        border: 1px solid green;
+        animation: mover 2s linear infinite;
+        border-radius: 50%;
+    }
+    @keyframes mover{
+        0%{transform: translateX(0%);}
+        50%{transform: translateX(90vw)rotate(1080deg);
+        background-color: red;}
+        100%{transform: translate()}
+
+    }
+</style>
+<body>
+    
+</body>
+</html>
