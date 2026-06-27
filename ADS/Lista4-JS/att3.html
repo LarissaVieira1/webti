@@ -36,7 +36,7 @@
   <h3>Resultado:</h3>
   <p id="resultadoIMC"></p>
   <p id="classificacao"></p>
-  <img id="imgPerfil" src="Imagens/" alt="Imagem do perfil">
+  <img id="imgPerfil" src="Imagem/perfil.jpg" alt="Imagem do perfil">
 
   <script>
     function calcularIMC() {
@@ -60,22 +60,22 @@
 
       if (imc < 18.5) {
         faixa = "Abaixo do peso";
-        imagem = "Imagens/magro.png";
+        imagem = "Imagem/magro.png";
       } else if (imc < 25) {
         faixa = "Peso normal";
-        imagem = "Imagens/normal.png";
+        imagem = "Imagem/normal.png";
       } else if (imc < 30) {
         faixa = "Sobrepeso";
-        imagem = "Imagens/sobrepeso.png";
+        imagem = "Imagem/sobrepeso.png";
       } else if (imc < 35) {
         faixa = "Obesidade grau 1";
-        imagem = "Imagens/obesidade1.png";
+        imagem = "Imagem/obesidade1.png";
       } else if (imc < 40) {
         faixa = "Obesidade grau 2";
-        imagem = "Imagens/obesidade2.png";
+        imagem = "Imagem/obesidade2.png";
       } else {
         faixa = "Obesidade grau 3 (mórbida)";
-        imagem = "Imagens/obesidade3.png";
+        imagem = "Imagem/obesidade3.png";
       }
 
       classificacao.textContent = `Classificação: ${faixa}`;

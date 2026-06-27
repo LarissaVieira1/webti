@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo">O que é JavaScript?</title>
+</head>
+<body>
+    <h1 id="titulo">O que é JavaScript?</h1>
+     <p id="Explicacoes">a: O JavaScript foi criado em 1995 para tornar as páginas da web interativas, permitindo que os navegadores respondessem às ações do usuário sem precisar recarregar a página;
+        <br>
+        b: No navegador, o JavaScript é executado no computador do usuário e pode acessar elementos da página, como textos e botões. Já no servidor, com ambientes como o Node.js, o código é executado antes da resposta ser enviada ao navegador, sendo usado para processar dados e acessar bancos de dados;
+        <br>
+        c: No navegador, o JavaScript funciona em uma sandbox, um ambiente isolado que limita o acesso ao sistema operacional para proteger o usuário;
+        <br>
+        d: O document é o objeto que representa a página HTML. Com ele, o JavaScript pode acessar e modificar elementos da página, como textos, imagens e botões. O console é usado para exibir mensagens e informações no console do navegador, ajudando o desenvolvedor a testar e encontrar erros no código. Já o alert exibe uma caixa de mensagem na tela para informar algo ao usuário e só continua a execução do programa depois que o botão OK é pressionado.
+     </p>
+      
+     <p>HORA ATUAL:</p>
+     <p id="horaAtual"></p>
+     
+     <script>
+        console.log("OI");
+        alert("HELLO WORLD");
+        let hora = new Date();
+        document.getElementById("horaAtual").innerHTML = hora.toLocaleTimeString();
+     </script>
+    
+</body>
+</html>
