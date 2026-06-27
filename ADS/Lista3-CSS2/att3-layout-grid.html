@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout template com Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            width: 100vw;
+            height: 100vh;
+            font-size: larger;
+            text-align: center;
+        }
+        .caixa{
+            border: 1px solid black;
+        }
+        #box1{
+            grid-column: 1/4;
+            background-color: rgb(224, 226, 112);
+        }
+        #box2{
+            grid-column: 1/1;
+            background-color: rgb(204, 61, 97);
+        }
+        #box3{
+            grid-area: 2/2/4/3;
+            background-color: rgb(224, 226, 112);
+        }
+        #box4{
+            background-color: rgb(204, 61, 97);
+        }
+        #box5{
+            grid-row: 3/5;
+            background-color: rgb(224, 226, 112);
+        }
+        #box6{
+            background-color: rgb(204, 61, 97);
+        }
+        #box7{
+            grid-column: 2/4;
+            background-color: rgb(224, 226, 112);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1" class="caixa">1</div>
+        <div id="box2" class="caixa">2</div>
+        <div id="box3" class="caixa">3</div>
+        <div id="box4" class="caixa">4</div>
+        <div id="box5" class="caixa">5</div>
+        <div id="box6" class="caixa">6</div>
+        <div id="box7" class="caixa">7</div>
+    </div>
+    
+</body>
+</html>

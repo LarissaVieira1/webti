@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com flexbox</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        #box1{
+            background-color: black;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: end;
+        }
+
+        #box2{
+            background-color: orange;
+            width: 100px;
+            height: calc(100vh - 120px);
+        }
+
+        .container2{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            height: calc(100vh - 120px);
+        }
+
+        #box3{
+            background-color: blue;
+            height: 20%;
+        }
+
+        #box4{
+            background-color: purple;
+            height: 60%;
+        }
+
+        #box5{
+            background-color: cadetblue;
+            height: 20%;
+        }
+
+        .circulo{
+            background-color: aqua;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .quadrado{
+            display: flex;
+            width: 200px;
+            height: 60px;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="box1">
+            <div class="quadrado">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+        </div>
+
+        <div id="box2">
+            navegação
+        </div>
+
+        <div class="container2">
+            <div id="box3">cabeçalho</div>
+            <div id="box4">conteúdo</div>
+            <div id="box5">rodapé</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
