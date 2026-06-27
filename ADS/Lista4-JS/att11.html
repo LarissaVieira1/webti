@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvando dados no Local Storage</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Digite seu nome">
+    <button id="saveButton">Salvar</button>
+    <p id="greeting"></p>
+
+    <script>
+        let button = document.querySelector("#saveButton");
+        button.addEventListener("click", ()=>{
+            salvarNome();
+        });
+        function salvarNome() {
+        const nome = document.getElementById('nameInput').value;
+        localStorage.setItem('nomeUsuario', nome);
+        document.getElementById('greeting').innerText = 'Nome salvo!';
+        }
+
+        function mostrarNomeSalvo() {
+        const nomeU = localStorage.getItem('nomeUsuario');
+
+        if (nomeU) {
+        document.getElementById('greeting').innerText =
+        `Bem-vindo de volta, ${nomeU}!`;
+        }
+        }
+
+        window.addEventListener('load', mostrarNomeSalvo);
+    
+
+    </script>
+    
+</body>
+     
+ 
+</html>
