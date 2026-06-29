@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTTP na prática: requisição e resposta</title>
+</head>
+    <style>
+        table,table>* {
+            border: 1px solid black;
+        }
+        h1{
+            color: rgb(35, 61, 211);
+        }
+        h2{
+            color: rgb(59, 70, 175);
+        }
+        h3{
+            color: rgb(94, 25, 184);
+        }
+    </style>
+<body>
+    <h1>Protocolo HTTP</h1>
+
+    <h2>O que é o HTTP?</h2>
+
+    <p> O HTTP (HyperText Transfer Protocol) é o protocolo que permite a comunicação entre navegadores e servidores na Web. Sempre que um usuário acessa um site, o navegador envia uma solicitação ao servidor, que responde enviando os recursos necessários, como páginas HTML, imagens, vídeos e outros arquivos. </p>
+
+    <h2>Papel do HTTP na comunicação entre navegador e servidor</h2>
+
+    <p> O HTTP define as regras para a troca de informações entre o cliente e o servidor. Quando um endereço é acessado, o navegador envia uma requisição ao servidor. Em seguida, o servidor processa essa solicitação e retorna uma resposta contendo o conteúdo solicitado ou uma mensagem indicando algum erro.</p>
+
+    <h2>Cliente, Servidor, Requisição e Resposta</h2>
+
+    <h3>Cliente</h3>
+    <p> É o dispositivo ou programa responsável por solicitar informações ao servidor. Geralmente, trata-se de um navegador, como Google Chrome, Mozilla Firefox ou Microsoft Edge. </p>
+
+    <h3>Servidor</h3>
+    <p> É o computador que hospeda o site e fornece os recursos solicitados pelos usuários.</p>
+
+    <h3>Requisição (Request)</h3>
+    <p> É a solicitação enviada pelo cliente ao servidor para acessar um determinado recurso, como uma página da Web ou uma imagem.</p>
+
+    <h3>Resposta (Response)</h3>
+    <p> É a mensagem enviada pelo servidor em resposta à requisição. Ela pode conter o recurso solicitado ou um código informando o resultado da solicitação.</p>
+
+    <h2>Métodos HTTP</h2>
+
+    <h3>GET</h3>
+    <p> O método GET é utilizado para solicitar informações ao servidor. Ele serve para acessar páginas, consultar dados e obter recursos, sem modificar as informações existentes.</p>
+
+    <h3>POST</h3>
+    <p> O método POST é usado para enviar informações ao servidor. É muito utilizado em formulários de cadastro, login, envio de mensagens e upload de arquivos.</p>
+
+    <h2>Exemplo de uma Requisição HTTP</h2>
+    <pre>
+        GET /index.html HTTP/1.1
+        Host: www.exemplo.com
+        User-Agent: Mozilla/5.0
+        Accept: text/html
+    </pre>
+
+    <h2>Exemplo de uma Resposta HTTP</h2>
+    <pre>
+        HTTP/1.1 200 OK
+        Content-Type: text/html
+        <html>
+            <body>
+        Página carregada com sucesso!
+            </body>
+        </html>
+    </pre>
+
+    <h2>Códigos de Status HTTP</h2>
+
+    <h3>200 - OK</h3>
+    <p> Indica que a requisição foi processada com sucesso e o recurso solicitado foi entregue ao cliente. </p>
+
+    <h3>301 - Moved Permanently</h3>
+    <p> Informa que o recurso foi movido permanentemente para outro endereço. A partir desse momento, o navegador deve utilizar o novo endereço. </p>
+
+    <h3>400 - Bad Request</h3>
+    <p> Significa que a requisição foi enviada de forma incorreta e não pôde ser compreendida pelo servidor.</p>
+
+    <h3>403 - Forbidden</h3>
+    <p> O servidor entendeu a solicitação, mas o cliente não possui permissão para acessar o recurso solicitado.</p>
+
+    <h3>404 - Not Found</h3>
+    <p> Indica que o recurso solicitado não foi encontrado no servidor.</p>
+
+    <h3>500 - Internal Server Error</h3>
+    <p> Representa um erro interno do servidor, impedindo que a requisição seja concluída com sucesso.</p>
+
+    <!-- Autor: Larissa Vieira | Turma: ADS-2 | Data: 28/06/2026 -->
+</body>
+
+</html>

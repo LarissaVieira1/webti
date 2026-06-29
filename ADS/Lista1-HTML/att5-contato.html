@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contato com Formulário</title>
+</head>
+    <style>
+        table, table>* {
+            border: 1px solid black;
+        }
+        h1{
+            color: rgb(35, 61, 211);
+        }
+        h2{
+            color: rgb(59, 70, 175);
+        }
+        h3{
+            color: rgb(94, 25, 184);
+        }
+
+    </style>
+<body>
+    
+    <h2>Menu de Navegação</h2>
+
+    <ul>
+        <li><a href="att4-curriculo.html">Currículo</a></li>
+    </ul>
+
+    <h1>Formulário de Contato</h1>
+
+    <p> Preencha os campos abaixo para entrar em contato. Os campos marcados como obrigatórios
+        devem ser preenchidos antes do envio do formulário.</p>
+
+    <form action="#" method="post">
+        <p> <label for="nome">Nome *</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required> </p>
+
+        <p> <label for="email">E-mail *</label><br>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required> </p>
+
+        <p> <label for="assunto">Assunto</label><br>
+            <input type="text" id="assunto" name="assunto" placeholder="Informe o assunto"> </p>
+
+        <p>
+            <label for="estado">Estado</label><br>
+
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="mensagem">Mensagem</label><br>
+            <textarea id="mensagem" name="mensagem" rows="6" cols="40" placeholder="Digite sua mensagem"></textarea> </p>
+
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </p>
+
+    </form>
+
+    <!-- Autor: Larissa Vieira | Turma: ADS-2 | Data: 28/06/2026 -->
+</body>
+</html>

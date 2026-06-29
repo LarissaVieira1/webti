@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo HTML com Elementos de Estrutura e Formatação</title>
+
+    <style>
+        table, table>* {
+            border: 1px solid black;
+        }
+        h1{
+            color: rgb(35, 61, 211);
+        }
+        h2{
+            color: rgb(59, 70, 175);
+        }
+        h3{
+            color: rgb(94, 25, 184);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Currículo</h1>
+
+    <nav>
+        <a href="#dados">Dados Pessoais</a> |
+        <a href="#habilidades">Habilidades</a> |
+        <a href="#formacao">Formação</a> |
+        <a href="#experiencia">Experiência</a> |
+        <a href="#horarios">Grade de Horários</a>
+    </nav>
+
+    <div id="dados">
+        <h2>Larissa Vieira</h2>
+
+        <img style="width: 400px; height: 500px;" src="img/Foto.jpeg" alt="Larissa Vieira">
+
+        <p><strong>E-mail:</strong>
+            <a href="mailto:Larissa.vsl@aluno.ifsc.edu.br">Larissa.vsl@aluno.ifsc.edu.br</a></p>
+
+        <p><strong>Telefone:</strong>
+            <a href="tel:+5547966666666">(47) 96666-6666</a></p>
+
+        <p><strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/larissa-vieira-de-sousa-lopes-484a48323/?skipRedirect=true" target="_blank">
+                linkedin.com/in/LarissaVieira
+            </a></p>
+
+        <p> Meu nome é Larissa Vieira,estudo no ifsc Gaspar e sonho em trabalhar na aréa da tecnologia! <br>
+        <em>"Não tem como derrubar quem já está no chão!"- Alguém em algum momento.</em></p>
+    </div>
+
+    <div id="habilidades">
+        <h2>Habilidades Técnicas</h2>
+        <ul>
+            <li>HTML;</li>
+            <li>CSS;</li>
+            <li>JavaScript;</li>
+            <li>Java;</li>
+            <li>MySQL;</li>
+            <li>Git e GitHub.</li>
+        </ul>
+    </div>
+
+    <section id="formacao">
+        <h2>Formação Acadêmica</h2>
+        <article>
+            <h3>Technologo em ADS:</h3>
+            <p> IFSC campus Gaspar;<br>
+                2025 - 2028 </p>
+        </article>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiência Profissional:</h2>
+        <article>
+            <h3>Não possuo!</h3>
+            <p> Participei de um projeto em equipe para o desenvolvimento de um sistema para Facções de costura. </p>
+        </article>
+    </section>
+
+    <div id="horarios">
+        <h2>Grade de Horários</h2>
+        <table>
+            <thead>
+                <th>Horário</th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+            </thead>
+
+            <tr>
+                <td>08:00 - 09:40</td>
+                <td>Algoritmos</td>
+                <td>Banco de Dados</td>
+                <td>HTML</td>
+                <td>Redes</td>
+                <td>Matemática</td>
+            </tr>
+
+            <tr>
+                <td>10:00 - 11:40</td>
+                <td>POO</td>
+                <td>Engenharia de Software</td>
+                <td>PHP</td>
+                <td>Banco de Dados</td>
+                <td>Projeto Integrador</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Autor: Larissa Vieira | Turma: ADS-2 | Data: 28/06/2026 -->
+</body>
+</html>
