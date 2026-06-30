@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe4ec;
+}
+
+.calculadora {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #f8a5c2;
+}
+
+.tela {
+    background-color: #ec6f91;
+    color: white;
+    font-size: 50px;
+    text-align: right;
+    padding: 20px;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid #f8bbd0;
+    cursor: pointer;
+    background-color: #fff0f5;
+}
+
+button.operador {
+    background-color: #f8bbd0;
+}
+
+button.igual {
+    background-color: #ec407a;
+    color: white;
+    grid-row: span 3;
+}
+
+button.ac {
+    background-color: #f06292;
+    color: white;
+}

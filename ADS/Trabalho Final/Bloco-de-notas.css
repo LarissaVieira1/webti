@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    height: 100svh;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #ffe4ec;
+}
+
+#telaNota {
+    grid-column: 1/2;
+    background-color: #fce4ec;
+}
+
+#telaNota > * {
+    position: relative;
+    left: 10px;
+}
+
+#lista {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    background-color: #fff0f5;
+}
+
+#tLS {
+    align-self: center;
+    color: #ec407a;
+}
+
+.botao {
+    width: 110px;
+    height: 30px;
+    background-color: #f06292;
+    color: white;
+    border: 1px solid #ec407a;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #ec407a;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="Bloco-de-notas.css">
+</head>
+<body>
+    <div id="telaNota">
+     <h1>Bloco de Notas</h1>
+     <p>Título:</p>
+     <input type="text" id="titulo" style="width: 500px; height: 30px;" placeholder="Digite o título da nota" required><br><br>
+
+     <p>Conteúdo:</p>
+     <textarea id="texto" style="resize: none; width: 500px; height: 200px;" rows="8" placeholder="Digite sua nota aqui" ></textarea><br><br>
+
+     <button class="botao" id="salvar">Salvar Nota</button>
+     <button class="botao" id="excluir">Excluir</button>
+    </div>
+    
+    <div id="lista">
+     <h2 id="tLS">Notas Salvas:</h2>
+     <ol id="listaNotas"></ol>
+    </div>
+    <script src="Bloco-de-notas.js"></script>
+</body>
+</html>
